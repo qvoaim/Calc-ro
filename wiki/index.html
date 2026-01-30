@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RoLatamWiki</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="#/ragnarok-online">Ragnarok Online Wiki</a></h1>
+	        <h1><a href="tong-calc-ro-host"><strong>CALCULADORA</strong></a></h1>
+      <input id="search" type="search" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+    </div>
+  </header>
+  <div class="container main-grid">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-blocks">
+    <!-- Contenido (collapsible, closed by default) -->
+    <details id="sidebar-details" class="sidebar-details">
+      <summary id="sidebar-summary" class="sidebar-summary" aria-controls="sidebar-nav" aria-expanded="false" role="button" tabindex="0">
+        <span class="sidebar-summary-title">Contenido</span>
+        <span class="sidebar-summary-toggle" aria-hidden="true">▾</span>
+      </summary>
+
+      <nav id="sidebar-nav" class="sidebar-nav" role="navigation">
+        <ul id="page-list" class="sidebar-page-list">
+          <li><a href="#/ragnarok-online" data-page="ragnarok-online">Ragnarok Online (2025 Renewal)</a></li>
+          <li><a href="#/prontera" data-page="prontera">Prontera — Ciudad</a></li>
+          <li><a href="#/weekend" data-page="weekend">Instancia Weekend</a></li>
+		  <li><a href="#/friday" data-page="friday">Friday — Instancia</a></li>
+        </ul>
+      </nav>
+    </details>
+
+    <!-- Categorías (collapsible, closed by default, independent) -->
+    <details id="categories-details" class="categories-details">
+      <summary id="categories-summary" class="sidebar-summary" aria-controls="categories-nav" aria-expanded="false" role="button" tabindex="0">
+        <span class="sidebar-summary-title">Categorías</span>
+        <span class="sidebar-summary-toggle" aria-hidden="true">▾</span>
+      </summary>
+
+      <nav id="categories-nav" class="categories-nav" role="navigation" aria-label="Categorías">
+  <ul class="categories-list">
+    <li>
+      <button class="category-toggle" aria-expanded="false" aria-controls="instancias-list">
+        Instancias <span class="cat-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+      <ul id="instancias-list" class="category-sublist" hidden>
+        <li><a href="#/weekend" data-page="weekend">Weekend</a></li>
+        <li><a href="#/friday" data-page="weekend">Friday</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <button class="category-toggle" aria-expanded="false" aria-controls="monstruos-list">
+        Monstruos <span class="cat-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+      <ul id="monstruos-list" class="category-sublist" hidden>
+        <li><a href="#/test" data-page="weekend">test</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <button class="category-toggle" aria-expanded="false" aria-controls="items-list">
+        Items <span class="cat-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+      <ul id="items-list" class="category-sublist" hidden>
+        <li><a href="#/test" data-page="weekend">test</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <button class="category-toggle" aria-expanded="false" aria-controls="mapas-list">
+        Mapas <span class="cat-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+      <ul id="mapas-list" class="category-sublist" hidden>
+        <li><a href="#/test" data-page="weekend">test</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+
+    <footer class="sidebar-foot">
+      <small>Wiki no oficial.</small>
+    </footer>
+  </div>
+</aside>
+
+    <main id="content" class="content" role="main" tabindex="-1">
+      <!-- El contenido de la página cargada aparece aquí -->
+      <article class="page-loading">
+        <h2>Bienvenido</h2>
+        <p>Abre un artículo desde la columna izquierda o usa la búsqueda.</p>
+      </article>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
