@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Swordman - Ejemplo", "version": "1.0", "job": "Swordman" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "swordman_1", "name": "Golpe básico", "description": "Aumenta daño físico.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["swordman_2"], "effects": [{ "stat": "damage", "perLevel": 2 }] },
+    { "id": "swordman_2", "name": "Golpe mejorado", "description": "Mejora el golpe básico.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "swordman_1", "minLevel": 2 }], "connections": ["swordman_3"], "effects": [{ "stat": "damage", "perLevel": 5 }] },
+    { "id": "swordman_3", "name": "Maestría en golpes", "description": "Aumenta crítico.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "swordman_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "crit", "perLevel": 10 }] }
+  ]
+}

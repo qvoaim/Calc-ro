@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Acolyte - Ejemplo", "version": "1.0", "job": "Acolyte" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "acolyte_1", "name": "Heal", "description": "Curación básica.", "position": { "x": 200, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["acolyte_2"], "effects": [{ "stat": "heal_power", "perLevel": 3 }] },
+    { "id": "acolyte_2", "name": "Purify", "description": "Quita debuffs.", "position": { "x": 420, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "acolyte_1", "minLevel": 2 }], "connections": ["acolyte_3"], "effects": [{ "stat": "cleanse_power", "perLevel": 2 }] },
+    { "id": "acolyte_3", "name": "Sacred Touch", "description": "Curación mejorada.", "position": { "x": 640, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "acolyte_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "heal_bonus", "perLevel": 10 }] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Shiranui - Ejemplo", "version": "1.0", "job": "Shiranui" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "shiranui_1", "name": "Flare", "description": "Explosión de luz.", "position": { "x": 220, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["shiranui_2"], "effects": [{ "stat": "light_damage", "perLevel": 3 }] },
+    { "id": "shiranui_2", "name": "Blaze", "description": "Llama intensa.", "position": { "x": 440, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "shiranui_1", "minLevel": 2 }], "connections": ["shiranui_3"], "effects": [{ "stat": "burn_damage", "perLevel": 4 }] },
+    { "id": "shiranui_3", "name": "Eternal Flame", "description": "Llama eterna.", "position": { "x": 660, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "shiranui_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "burn_dot", "perLevel": 12 }] }
+  ]
+}

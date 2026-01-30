@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Warlock - Ejemplo", "version": "1.0", "job": "Warlock" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "warlock_1", "name": "Curse", "description": "Maldición que reduce stats.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["warlock_2"], "effects": [{ "stat": "enemy_debuff", "perLevel": 2 }] },
+    { "id": "warlock_2", "name": "Life Drain", "description": "Roba vida al enemigo.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "warlock_1", "minLevel": 2 }], "connections": ["warlock_3"], "effects": [{ "stat": "life_steal", "perLevel": 3 }] },
+    { "id": "warlock_3", "name": "Doom", "description": "Condena a un objetivo.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "warlock_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "dot_damage", "perLevel": 10 }] }
+  ]
+}

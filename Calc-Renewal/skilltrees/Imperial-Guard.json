@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Imperial-Guard - Ejemplo", "version": "1.0", "job": "Imperial-Guard" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "imperial_guard_1", "name": "Orden imperial", "description": "Comando en batalla.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["imperial_guard_2"], "effects": [{ "stat": "command", "perLevel": 1 }] },
+    { "id": "imperial_guard_2", "name": "Formación", "description": "Aumenta defensa del grupo.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "imperial_guard_1", "minLevel": 2 }], "connections": ["imperial_guard_3"], "effects": [{ "stat": "party_armor", "perLevel": 4 }] },
+    { "id": "imperial_guard_3", "name": "Imposición", "description": "Aturde enemigos cercanos.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "imperial_guard_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "stun_chance", "perLevel": 8 }] }
+  ]
+}

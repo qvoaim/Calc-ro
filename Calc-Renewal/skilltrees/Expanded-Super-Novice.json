@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Expanded-Super-Novice - Ejemplo", "version": "1.0", "job": "Expanded-Super-Novice" },
+  "rules": { "totalSkillPoints": 16 },
+  "skills": [
+    { "id": "exp_super_novice_1", "name": "Expansion", "description": "Base expandida.", "position": { "x": 250, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["exp_super_novice_2","exp_super_novice_3"], "effects": [{ "stat": "all_stats", "perLevel": 1 }] },
+    { "id": "exp_super_novice_2", "name": "Adapt", "description": "Mayor adaptabilidad.", "position": { "x": 450, "y": 120 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "exp_super_novice_1", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "skill_variety", "perLevel": 1 }] },
+    { "id": "exp_super_novice_3", "name": "Mastery", "description": "Dominio extendido.", "position": { "x": 450, "y": 180 }, "maxLevel": 2, "currentLevel": 0, "prerequisites": [{ "id": "exp_super_novice_1", "minLevel": 2 }], "connections": [], "effects": [{ "stat": "cooldown_reduce", "perLevel": 6 }] }
+  ]
+}

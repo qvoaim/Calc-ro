@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Inquisitor - Ejemplo", "version": "1.0", "job": "Inquisitor" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "inquisitor_1", "name": "Expose", "description": "Revela debilidades.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["inquisitor_2"], "effects": [{ "stat": "enemy_weakness", "perLevel": 2 }] },
+    { "id": "inquisitor_2", "name": "Truth Strike", "description": "Ataque que ignora defensa.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "inquisitor_1", "minLevel": 2 }], "connections": ["inquisitor_3"], "effects": [{ "stat": "def_ignore", "perLevel": 3 }] },
+    { "id": "inquisitor_3", "name": "Purge", "description": "Elimina buffs enemigos.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "inquisitor_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "debuff_clear", "perLevel": 1 }] }
+  ]
+}

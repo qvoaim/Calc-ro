@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Soul-Reaper - Ejemplo", "version": "1.0", "job": "Soul-Reaper" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "soul_reaper_1", "name": "Reap", "description": "Cosecha almas.", "position": { "x": 240, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["soul_reaper_2"], "effects": [{ "stat": "soul_gain", "perLevel": 2 }] },
+    { "id": "soul_reaper_2", "name": "Grim Harvest", "description": "Recolecta energía oscura.", "position": { "x": 460, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "soul_reaper_1", "minLevel": 2 }], "connections": ["soul_reaper_3"], "effects": [{ "stat": "life_steal", "perLevel": 3 }] },
+    { "id": "soul_reaper_3", "name": "Abyssal Scythe", "description": "Guadaña poderosa.", "position": { "x": 680, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "soul_reaper_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "true_damage", "perLevel": 20 }] }
+  ]
+}

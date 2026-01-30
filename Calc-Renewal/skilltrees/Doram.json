@@ -1,0 +1,39 @@
+{
+  "meta": { "name": "Doram - Ejemplo", "version": "1.0", "job": "Doram" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    {
+      "id": "doram_1",
+      "name": "Purr Strike",
+      "description": "Ataque felino básico.",
+      "position": { "x": 220, "y": 160 },
+      "maxLevel": 5,
+      "currentLevel": 0,
+      "prerequisites": [],
+      "connections": ["doram_2"],
+      "effects": [{ "stat": "damage", "perLevel": 3 }]
+    },
+    {
+      "id": "doram_2",
+      "name": "Feline Agility",
+      "description": "Aumenta velocidad y evasión.",
+      "position": { "x": 440, "y": 160 },
+      "maxLevel": 3,
+      "currentLevel": 0,
+      "prerequisites": [{ "id": "doram_1", "minLevel": 2 }],
+      "connections": ["doram_3"],
+      "effects": [{ "stat": "evasion", "perLevel": 4 }]
+    },
+    {
+      "id": "doram_3",
+      "name": "Moon Howl",
+      "description": "Desata un aullido que potencia aliados.",
+      "position": { "x": 660, "y": 160 },
+      "maxLevel": 1,
+      "currentLevel": 0,
+      "prerequisites": [{ "id": "doram_2", "minLevel": 1 }],
+      "connections": [],
+      "effects": [{ "stat": "party_atk", "perLevel": 8 }]
+    }
+  ]
+}

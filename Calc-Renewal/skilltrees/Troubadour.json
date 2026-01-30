@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Troubadour - Ejemplo", "version": "1.0", "job": "Troubadour" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "troubadour_1", "name": "Verse", "description": "Canción narrativa.", "position": { "x": 230, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["troubadour_2"], "effects": [{ "stat": "story_buff", "perLevel": 1 }] },
+    { "id": "troubadour_2", "name": "Epic Chorus", "description": "Coro épico.", "position": { "x": 450, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "troubadour_1", "minLevel": 2 }], "connections": ["troubadour_3"], "effects": [{ "stat": "party_buff", "perLevel": 4 }] },
+    { "id": "troubadour_3", "name": "Legend's Call", "description": "Invoca leyenda musical.", "position": { "x": 670, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "troubadour_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "legend_buff", "perLevel": 12 }] }
+  ]
+}

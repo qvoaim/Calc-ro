@@ -1,0 +1,104 @@
+:root{
+  --bg:#0f1720;
+  --panel:#0b1220;
+  --accent:#ffb86b;
+  --muted:#9aa4b2;
+  --node-bg:#28343d;
+  --node-locked:#32444f;
+  --node-active:#ffd27f;
+  --btn-bg:#0d4b63;
+  --btn-bg-hover:#0f6a87;
+  --btn-color:#ffffff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,Arial;background:linear-gradient(180deg,#071023 0%, #071521 100%);color:#e6eef6}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.03)}
+header h1{font-size:18px;margin:0}
+.controls{display:flex;gap:8px;align-items:center}
+.controls button{padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#0b1220;color:var(--muted);cursor:pointer}
+.controls button:hover{color:white}
+.controls select{
+  background:#07111a;color:var(--muted);border:1px solid rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;
+}
+.small-checkbox{color:var(--muted);font-size:13px;display:inline-flex;align-items:center;gap:6px}
+#points-info{margin-left:8px;color:var(--accent);font-weight:600}
+
+main{display:flex;height:calc(100vh - 110px);gap:12px;padding:12px}
+#sidebar{width:300px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+#skill-info{margin-top:8px;background:rgba(0,0,0,0.2);padding:8px;border-radius:6px;min-height:120px}
+#message{margin-top:8px;color:#ffb3a7}
+
+/* Contenedor de la imagen del job */
+#job-image-container{
+  margin-top:12px;
+  display:block;
+  text-align:center;
+}
+#job-image{
+  max-width:100%;
+  height:auto;
+  border-radius:8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  display:none;
+}
+
+/* canvas */
+#canvas-area{flex:1;border-radius:8px;overflow:hidden;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));position:relative}
+#board{position:absolute;left:0;top:0;width:3000px;height:4000px;transform-origin:0 0;cursor:grab}
+#board.grabbing{cursor:grabbing}
+
+/* svg que ocupa todo el tablero para líneas */
+#connections{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+
+/* Nodo: tamaño aumentado para botones más grandes */
+.node{
+  position:absolute;
+  width:110px;
+  height:110px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#0b1220;
+  background:var(--node-bg);
+  border:2px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+  user-select:none;
+  transition:transform .12s, box-shadow .12s, background .12s;
+  padding:8px;
+}
+.node.locked{
+  background: var(--node-locked);
+  color: #d8e6ef;
+  opacity: 0.96;
+}
+.node.active{background:var(--node-active)}
+.node:hover{transform:translateY(-6px) scale(1.02);box-shadow: 0 18px 36px rgba(0,0,0,0.6);}
+
+.node .title{font-size:13px;padding:4px;color:inherit}
+.node .controls{position:absolute;bottom:10px;display:flex;gap:8px}
+.node button{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  border:none;
+  background:var(--btn-bg);
+  color:var(--btn-color);
+  font-weight:700;
+  font-size:18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+}
+.node button:hover{background:var(--btn-bg-hover)}
+.node button:disabled{opacity:0.45;cursor:not-allowed;box-shadow:none}
+.node .level{position:absolute;top:8px;right:10px;background:rgba(0,0,0,0.15);padding:4px 8px;border-radius:8px;font-weight:700;font-size:12px;color:inherit}
+
+footer{padding:10px 18px;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.02)}
+.sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;}

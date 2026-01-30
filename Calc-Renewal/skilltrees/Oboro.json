@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Oboro - Ejemplo", "version": "1.0", "job": "Oboro" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "oboro_1", "name": "Mist", "description": "Niebla defensiva.", "position": { "x": 220, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["oboro_2"], "effects": [{ "stat": "defense_bleed", "perLevel": 2 }] },
+    { "id": "oboro_2", "name": "Phantom Strike", "description": "Golpe fantasmal.", "position": { "x": 440, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "oboro_1", "minLevel": 2 }], "connections": ["oboro_3"], "effects": [{ "stat": "damage", "perLevel": 4 }] },
+    { "id": "oboro_3", "name": "Night Veil", "description": "Protección nocturna.", "position": { "x": 660, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "oboro_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "resist_night", "perLevel": 12 }] }
+  ]
+}

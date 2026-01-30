@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Biolo - Ejemplo", "version": "1.0", "job": "Biolo" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "biolo_1", "name": "Anatomy", "description": "Conoce puntos vitales.", "position": { "x": 220, "y": 180 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["biolo_2"], "effects": [{ "stat": "crit_damage", "perLevel": 2 }] },
+    { "id": "biolo_2", "name": "Dissection", "description": "Analiza enemigos.", "position": { "x": 440, "y": 180 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "biolo_1", "minLevel": 2 }], "connections": ["biolo_3"], "effects": [{ "stat": "loot_chance", "perLevel": 3 }] },
+    { "id": "biolo_3", "name": "Bio Master", "description": "Dominio biológico.", "position": { "x": 660, "y": 180 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "biolo_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "bio_power", "perLevel": 10 }] }
+  ]
+}

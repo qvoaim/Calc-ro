@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Soul-Linker - Ejemplo", "version": "1.0", "job": "Soul-Linker" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "soul_linker_1", "name": "Link", "description": "Vincula almas.", "position": { "x": 240, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["soul_linker_2"], "effects": [{ "stat": "link_power", "perLevel": 3 }] },
+    { "id": "soul_linker_2", "name": "Soul Aid", "description": "Auxilio espiritual.", "position": { "x": 460, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "soul_linker_1", "minLevel": 2 }], "connections": ["soul_linker_3"], "effects": [{ "stat": "heal_power", "perLevel": 4 }] },
+    { "id": "soul_linker_3", "name": "Soul Burst", "description": "Explota energía de almas.", "position": { "x": 680, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "soul_linker_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "aoe_soul", "perLevel": 12 }] }
+  ]
+}

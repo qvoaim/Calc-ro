@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "TaeKwon-Kid - Ejemplo", "version": "1.0", "job": "TaeKwon-Kid" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "taekwon_kid_1", "name": "Kick", "description": "Patada básica.", "position": { "x": 220, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["taekwon_kid_2"], "effects": [{ "stat": "damage", "perLevel": 2 }] },
+    { "id": "taekwon_kid_2", "name": "Focus", "description": "Concentración de poder.", "position": { "x": 440, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "taekwon_kid_1", "minLevel": 2 }], "connections": ["taekwon_kid_3"], "effects": [{ "stat": "crit_chance", "perLevel": 2 }] },
+    { "id": "taekwon_kid_3", "name": "Kid Storm", "description": "Ataque giratorio.", "position": { "x": 660, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "taekwon_kid_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "aoe_damage", "perLevel": 10 }] }
+  ]
+}

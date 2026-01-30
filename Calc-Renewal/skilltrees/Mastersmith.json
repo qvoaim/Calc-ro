@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Mastersmith - Ejemplo", "version": "1.0", "job": "Mastersmith" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "mastersmith_1", "name": "Advanced Forge", "description": "Forja avanzada.", "position": { "x": 220, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["mastersmith_2"], "effects": [{ "stat": "weapon_power", "perLevel": 3 }] },
+    { "id": "mastersmith_2", "name": "Precision", "description": "Mejora estadisticas del arma.", "position": { "x": 440, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "mastersmith_1", "minLevel": 2 }], "connections": ["mastersmith_3"], "effects": [{ "stat": "weapon_accuracy", "perLevel": 4 }] },
+    { "id": "mastersmith_3", "name": "Legendary Craft", "description": "Crear objetos legendarios.", "position": { "x": 660, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "mastersmith_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "legendary_chance", "perLevel": 5 }] }
+  ]
+}

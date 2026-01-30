@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Rebel - Ejemplo", "version": "1.0", "job": "Rebel" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "rebel_1", "name": "Anarchy", "description": "Incrementa caos.", "position": { "x": 220, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["rebel_2"], "effects": [{ "stat": "critical_rate", "perLevel": 1 }] },
+    { "id": "rebel_2", "name": "Molotov", "description": "Lanzamiento de fuego.", "position": { "x": 440, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "rebel_1", "minLevel": 2 }], "connections": ["rebel_3"], "effects": [{ "stat": "burn_area", "perLevel": 4 }] },
+    { "id": "rebel_3", "name": "Outlaw's Cry", "description": "Aumenta daño de aliados marginales.", "position": { "x": 660, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "rebel_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "party_buff", "perLevel": 10 }] }
+  ]
+}

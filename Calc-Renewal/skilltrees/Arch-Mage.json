@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Arch-Mage - Ejemplo", "version": "1.0", "job": "Arch-Mage" },
+  "rules": { "totalSkillPoints": 14 },
+  "skills": [
+    { "id": "arch_mage_1", "name": "Grand Sorcery", "description": "Hechizo poderoso.", "position": { "x": 200, "y": 140 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["arch_mage_2"], "effects": [{ "stat": "magic_damage", "perLevel": 6 }] },
+    { "id": "arch_mage_2", "name": "Mana Overflow", "description": "Aumento de mana.", "position": { "x": 420, "y": 140 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "arch_mage_1", "minLevel": 2 }], "connections": ["arch_mage_3"], "effects": [{ "stat": "mp", "perLevel": 50 }] },
+    { "id": "arch_mage_3", "name": "Ultimate", "description": "Habilidad definitiva.", "position": { "x": 640, "y": 140 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "arch_mage_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "damage_multiplier", "perLevel": 20 }] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Knight - Ejemplo", "version": "1.0", "job": "Knight" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "knight_1", "name": "Estocada", "description": "Ataque cuerpo a cuerpo.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["knight_2"], "effects": [{ "stat": "damage", "perLevel": 3 }] },
+    { "id": "knight_2", "name": "Guardia", "description": "Aumenta defensa.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "knight_1", "minLevel": 2 }], "connections": ["knight_3"], "effects": [{ "stat": "armor", "perLevel": 4 }] },
+    { "id": "knight_3", "name": "Valor", "description": "Reduce daño recibido.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "knight_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "damage_reduce", "perLevel": 5 }] }
+  ]
+}

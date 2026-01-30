@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Stalker - Ejemplo", "version": "1.0", "job": "Stalker" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "stalker_1", "name": "Lurk", "description": "Acechar al objetivo.", "position": { "x": 200, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["stalker_2"], "effects": [{ "stat": "track", "perLevel": 2 }] },
+    { "id": "stalker_2", "name": "Ambush", "description": "Emboscar con ventaja.", "position": { "x": 420, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "stalker_1", "minLevel": 2 }], "connections": ["stalker_3"], "effects": [{ "stat": "crit_damage", "perLevel": 5 }] },
+    { "id": "stalker_3", "name": "Ghost Step", "description": "Paso etéreo.", "position": { "x": 640, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "stalker_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "evasion", "perLevel": 8 }] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Blacksmith - Ejemplo", "version": "1.0", "job": "Blacksmith" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "blacksmith_1", "name": "Forge", "description": "Mejora forja de armas.", "position": { "x": 220, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["blacksmith_2"], "effects": [{ "stat": "weapon_quality", "perLevel": 2 }] },
+    { "id": "blacksmith_2", "name": "Metalworking", "description": "Reduce fallo en forja.", "position": { "x": 440, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "blacksmith_1", "minLevel": 2 }], "connections": ["blacksmith_3"], "effects": [{ "stat": "forge_success", "perLevel": 5 }] },
+    { "id": "blacksmith_3", "name": "Master Smith", "description": "Aumenta rareza de objetos.", "position": { "x": 660, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "blacksmith_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "item_rarity", "perLevel": 8 }] }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Hyper-Novice - Ejemplo", "version": "1.0", "job": "Hyper-Novice" },
+  "rules": { "totalSkillPoints": 18 },
+  "skills": [
+    { "id": "hyper_novice_1", "name": "Hyper Init", "description": "Base poderosa.", "position": { "x": 250, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["hyper_novice_2","hyper_novice_3"], "effects": [{ "stat": "hp_mp", "perLevel": 15 }] },
+    { "id": "hyper_novice_2", "name": "Rapid Growth", "description": "Crecimiento rápido.", "position": { "x": 450, "y": 120 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "hyper_novice_1", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "exp_gain", "perLevel": 5 }] },
+    { "id": "hyper_novice_3", "name": "Ultimate Flex", "description": "Flexibilidad extrema.", "position": { "x": 450, "y": 180 }, "maxLevel": 2, "currentLevel": 0, "prerequisites": [{ "id": "hyper_novice_1", "minLevel": 2 }], "connections": [], "effects": [{ "stat": "skill_variety", "perLevel": 2 }] }
+  ]
+}

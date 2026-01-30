@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Priest - Ejemplo", "version": "1.0", "job": "Priest" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "priest_1", "name": "Bless", "description": "Bendición de protección.", "position": { "x": 200, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["priest_2"], "effects": [{ "stat": "resist", "perLevel": 2 }] },
+    { "id": "priest_2", "name": "Greater Heal", "description": "Curación potente.", "position": { "x": 420, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "priest_1", "minLevel": 2 }], "connections": ["priest_3"], "effects": [{ "stat": "heal_power", "perLevel": 6 }] },
+    { "id": "priest_3", "name": "Holy Light", "description": "Daño sagrado masivo.", "position": { "x": 640, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "priest_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "holy_damage", "perLevel": 12 }] }
+  ]
+}

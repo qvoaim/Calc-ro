@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simulador de Skill — Versión ligera</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- lz-string para comprimir el estado en la URL -->
+  <script src="https://cdn.jsdelivr.net/npm/lz-string/libs/lz-string.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Simulador de Skill — Versión ligera</h1>
+    <div class="controls">
+      <label for="group-select" class="sr-only">Seleccionar grupo</label>
+      <select id="group-select" aria-label="Seleccionar grupo">
+        <option value="">— Grupo de clases —</option>
+      </select>
+      <button id="btn-reset">Reset</button>
+      <button id="btn-export">Exportar build (.json)</button>
+      <input id="file-import" type="file" accept=".json" style="display:none"/>
+      <button id="btn-import">Importar build (.json)</button>
+      <button id="btn-share">Generar enlace (copiar)</button>
+      <span id="points-info"></span>
+    </div>
+  </header>
+
+  <main>
+    <aside id="sidebar">
+      <h3>Skill seleccionado</h3>
+      <div id="skill-info">Ninguno</div>
+      <div id="message" role="status" aria-live="polite"></div>
+
+      <!-- Contenedor de imagen del job: aparece debajo de la info del skill -->
+      <div id="job-image-container" aria-hidden="true">
+        <img id="job-image" src="" alt="" />
+      </div>
+
+      <!-- Lista de jobs cargados (cuando se carga un grupo) -->
+      <div id="group-jobs-list" style="margin-top:10px;color:var(--muted);font-size:13px"></div>
+    </aside>
+
+    <section id="canvas-area">
+      <!-- tablero que se mueve/escala -->
+      <div id="board">
+        <!-- svg para líneas/conexiones -->
+        <svg id="connections"></svg>
+        <!-- nodes se insertan como divs dentro de #board -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Coloca la carpeta <code>src/img_job/</code> con las imágenes de job (mismo nombre que el job) y abre index.html desde un servidor local.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

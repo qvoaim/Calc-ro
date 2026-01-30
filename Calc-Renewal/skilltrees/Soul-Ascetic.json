@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Soul-Ascetic - Ejemplo", "version": "1.0", "job": "Soul-Ascetic" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "soul_ascetic_1", "name": "Abnegation", "description": "Renuncia para potenciar.", "position": { "x": 240, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["soul_ascetic_2"], "effects": [{ "stat": "self_buff", "perLevel": 2 }] },
+    { "id": "soul_ascetic_2", "name": "Meditative Slash", "description": "Corte enfocado.", "position": { "x": 460, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "soul_ascetic_1", "minLevel": 2 }], "connections": ["soul_ascetic_3"], "effects": [{ "stat": "damage", "perLevel": 4 }] },
+    { "id": "soul_ascetic_3", "name": "Enlightenment", "description": "Estado de iluminación.", "position": { "x": 680, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "soul_ascetic_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "all_stats", "perLevel": 6 }] }
+  ]
+}

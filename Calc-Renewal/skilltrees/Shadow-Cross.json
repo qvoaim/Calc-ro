@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Shadow-Cross - Ejemplo", "version": "1.0", "job": "Shadow-Cross" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "shadow_cross_1", "name": "Night Strike", "description": "Golpe nocturno.", "position": { "x": 200, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["shadow_cross_2"], "effects": [{ "stat": "damage", "perLevel": 3 }] },
+    { "id": "shadow_cross_2", "name": "Umbral Guard", "description": "Protección sombría.", "position": { "x": 420, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "shadow_cross_1", "minLevel": 2 }], "connections": ["shadow_cross_3"], "effects": [{ "stat": "shadow_resist", "perLevel": 4 }] },
+    { "id": "shadow_cross_3", "name": "Eclipse", "description": "Oscurece el campo de batalla.", "position": { "x": 640, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "shadow_cross_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "aoe_shadow", "perLevel": 12 }] }
+  ]
+}

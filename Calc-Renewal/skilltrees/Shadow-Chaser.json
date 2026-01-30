@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Shadow-Chaser - Ejemplo", "version": "1.0", "job": "Shadow-Chaser" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "shadow_chaser_1", "name": "Chase", "description": "Perseguir sombras.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["shadow_chaser_2"], "effects": [{ "stat": "speed", "perLevel": 2 }] },
+    { "id": "shadow_chaser_2", "name": "Night Prowl", "description": "Caza en la noche.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "shadow_chaser_1", "minLevel": 2 }], "connections": ["shadow_chaser_3"], "effects": [{ "stat": "crit_chance", "perLevel": 3 }] },
+    { "id": "shadow_chaser_3", "name": "Predator", "description": "Depredador silencioso.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "shadow_chaser_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "damage_vs_stealthed", "perLevel": 12 }] }
+  ]
+}

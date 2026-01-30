@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Mage - Ejemplo", "version": "1.0", "job": "Mage" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "mage_1", "name": "Fire Bolt", "description": "Lanza un proyectil de fuego.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["mage_2"], "effects": [{ "stat": "magic_damage", "perLevel": 3 }] },
+    { "id": "mage_2", "name": "Flame Surge", "description": "Aumenta daño de Fire Bolt.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "mage_1", "minLevel": 2 }], "connections": ["mage_3"], "effects": [{ "stat": "magic_damage", "perLevel": 7 }] },
+    { "id": "mage_3", "name": "Fire Mastery", "description": "Incrementa crítico mágico.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "mage_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "magic_crit", "perLevel": 8 }] }
+  ]
+}

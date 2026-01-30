@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Dancer - Ejemplo", "version": "1.0", "job": "Dancer" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "dancer_1", "name": "Rhythm", "description": "Mejora agilidad.", "position": { "x": 230, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["dancer_2"], "effects": [{ "stat": "agility", "perLevel": 1 }] },
+    { "id": "dancer_2", "name": "Spin Attack", "description": "Ataque giratorio.", "position": { "x": 450, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "dancer_1", "minLevel": 2 }], "connections": ["dancer_3"], "effects": [{ "stat": "aoe_damage", "perLevel": 4 }] },
+    { "id": "dancer_3", "name": "Enthrall", "description": "Aturde enemigos cercanos.", "position": { "x": 670, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "dancer_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "stun_chance", "perLevel": 8 }] }
+  ]
+}

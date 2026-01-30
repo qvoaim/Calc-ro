@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "name": "Ejemplo Skilltree",
+    "version": "1.0"
+  },
+  "rules": {
+    "totalSkillPoints": 10
+  },
+  "skills": [
+    {
+      "id": "s1",
+      "name": "Nodo A",
+      "description": "Nodo de ejemplo A.",
+      "position": { "x": 200, "y": 150 },
+      "maxLevel": 5,
+      "currentLevel": 0,
+      "prerequisites": [],
+      "connections": ["s2"],
+      "effects": [{ "stat": "damage", "perLevel": 2 }]
+    },
+    {
+      "id": "s2",
+      "name": "Nodo B",
+      "description": "Nodo de ejemplo B.",
+      "position": { "x": 420, "y": 150 },
+      "maxLevel": 3,
+      "currentLevel": 0,
+      "prerequisites": [{ "id": "s1", "minLevel": 2 }],
+      "connections": [],
+      "effects": [{ "stat": "damage", "perLevel": 5 }]
+    }
+  ]
+}

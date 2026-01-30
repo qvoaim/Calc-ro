@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Maestro - Ejemplo", "version": "1.0", "job": "Maestro" },
+  "rules": { "totalSkillPoints": 12 },
+  "skills": [
+    { "id": "maestro_1", "name": "Conduct", "description": "Dirige la armonía.", "position": { "x": 230, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["maestro_2"], "effects": [{ "stat": "song_power", "perLevel": 2 }] },
+    { "id": "maestro_2", "name": "Symphony", "description": "Canción poderosa.", "position": { "x": 450, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "maestro_1", "minLevel": 2 }], "connections": ["maestro_3"], "effects": [{ "stat": "party_buff", "perLevel": 4 }] },
+    { "id": "maestro_3", "name": "Masterpiece", "description": "Composición suprema.", "position": { "x": 670, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "maestro_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "ultimate_song", "perLevel": 15 }] }
+  ]
+}

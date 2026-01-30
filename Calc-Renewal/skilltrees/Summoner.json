@@ -1,0 +1,39 @@
+{
+  "meta": { "name": "Summoner - Ejemplo", "version": "1.0", "job": "Summoner" },
+  "rules": { "totalSkillPoints": 13 },
+  "skills": [
+    {
+      "id": "summoner_1",
+      "name": "Call Familiar",
+      "description": "Invoca una mascota menor.",
+      "position": { "x": 240, "y": 150 },
+      "maxLevel": 5,
+      "currentLevel": 0,
+      "prerequisites": [],
+      "connections": ["summoner_2"],
+      "effects": [{ "stat": "pet_power", "perLevel": 2 }]
+    },
+    {
+      "id": "summoner_2",
+      "name": "Bond Strength",
+      "description": "Fortalece a los invocados.",
+      "position": { "x": 460, "y": 150 },
+      "maxLevel": 3,
+      "currentLevel": 0,
+      "prerequisites": [{ "id": "summoner_1", "minLevel": 2 }],
+      "connections": ["summoner_3"],
+      "effects": [{ "stat": "pet_hp", "perLevel": 20 }]
+    },
+    {
+      "id": "summoner_3",
+      "name": "Ritual of Dominance",
+      "description": "Invoca un ser poderoso temporalmente.",
+      "position": { "x": 680, "y": 150 },
+      "maxLevel": 1,
+      "currentLevel": 0,
+      "prerequisites": [{ "id": "summoner_2", "minLevel": 1 }],
+      "connections": [],
+      "effects": [{ "stat": "summon_power", "perLevel": 18 }]
+    }
+  ]
+}

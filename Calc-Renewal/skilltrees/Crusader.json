@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Crusader - Ejemplo", "version": "1.0", "job": "Crusader" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "crusader_1", "name": "Luz sagrada", "description": "Daño sagrado.", "position": { "x": 200, "y": 140 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["crusader_2"], "effects": [{ "stat": "holy_damage", "perLevel": 3 }] },
+    { "id": "crusader_2", "name": "Bendición", "description": "Aumenta defensa del grupo.", "position": { "x": 420, "y": 140 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "crusader_1", "minLevel": 2 }], "connections": ["crusader_3"], "effects": [{ "stat": "party_armor", "perLevel": 4 }] },
+    { "id": "crusader_3", "name": "Sacrificio", "description": "Intercambia HP por daño.", "position": { "x": 640, "y": 140 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "crusader_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "damage_boost", "perLevel": 12 }] }
+  ]
+}

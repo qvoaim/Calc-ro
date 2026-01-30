@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Sura - Ejemplo", "version": "1.0", "job": "Sura" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "sura_1", "name": "Dark Slash", "description": "Corte oscuro.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["sura_2"], "effects": [{ "stat": "dark_damage", "perLevel": 3 }] },
+    { "id": "sura_2", "name": "Spirit Armor", "description": "Armadura espiritual.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "sura_1", "minLevel": 2 }], "connections": ["sura_3"], "effects": [{ "stat": "spirit_def", "perLevel": 4 }] },
+    { "id": "sura_3", "name": "Soul Release", "description": "Libera poder del alma.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "sura_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "soul_power", "perLevel": 12 }] }
+  ]
+}

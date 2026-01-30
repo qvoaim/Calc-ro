@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Gypsy - Ejemplo", "version": "1.0", "job": "Gypsy" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "gypsy_1", "name": "Dance Step", "description": "Movimiento encantador.", "position": { "x": 230, "y": 170 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["gypsy_2"], "effects": [{ "stat": "charm", "perLevel": 1 }] },
+    { "id": "gypsy_2", "name": "Song of Luck", "description": "Mejora suerte del grupo.", "position": { "x": 450, "y": 170 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "gypsy_1", "minLevel": 2 }], "connections": ["gypsy_3"], "effects": [{ "stat": "loot_chance", "perLevel": 3 }] },
+    { "id": "gypsy_3", "name": "Fortune's Favor", "description": "Aumenta todas las probabilidades positivas.", "position": { "x": 670, "y": 170 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "gypsy_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "lucky_bonus", "perLevel": 10 }] }
+  ]
+}

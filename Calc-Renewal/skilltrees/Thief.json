@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Thief - Ejemplo", "version": "1.0", "job": "Thief" },
+  "rules": { "totalSkillPoints": 10 },
+  "skills": [
+    { "id": "thief_1", "name": "Steal", "description": "Robar recursos.", "position": { "x": 200, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["thief_2"], "effects": [{ "stat": "steal_chance", "perLevel": 2 }] },
+    { "id": "thief_2", "name": "Backstab", "description": "Ataque por la espalda.", "position": { "x": 420, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "thief_1", "minLevel": 2 }], "connections": ["thief_3"], "effects": [{ "stat": "crit_damage", "perLevel": 5 }] },
+    { "id": "thief_3", "name": "Evasion", "description": "Aumenta esquiva.", "position": { "x": 640, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "thief_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "dodge", "perLevel": 10 }] }
+  ]
+}

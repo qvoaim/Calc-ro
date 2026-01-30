@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Champion - Ejemplo", "version": "1.0", "job": "Champion" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "champion_1", "name": "Heroic Strike", "description": "Golpe heroico.", "position": { "x": 200, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["champion_2"], "effects": [{ "stat": "damage", "perLevel": 4 }] },
+    { "id": "champion_2", "name": "Battle Cry", "description": "Aumenta moral del equipo.", "position": { "x": 420, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "champion_1", "minLevel": 2 }], "connections": ["champion_3"], "effects": [{ "stat": "party_attack", "perLevel": 3 }] },
+    { "id": "champion_3", "name": "Glorious End", "description": "Ataque final potente.", "position": { "x": 640, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "champion_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "crit_damage", "perLevel": 15 }] }
+  ]
+}

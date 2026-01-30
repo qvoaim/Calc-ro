@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Arch-Bishop - Ejemplo", "version": "1.0", "job": "Arch-Bishop" },
+  "rules": { "totalSkillPoints": 13 },
+  "skills": [
+    { "id": "arch_bishop_1", "name": "Divine Wrath", "description": "Ira divina.", "position": { "x": 200, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["arch_bishop_2"], "effects": [{ "stat": "holy_damage", "perLevel": 5 }] },
+    { "id": "arch_bishop_2", "name": "Sacred Shield", "description": "Protección sagrada.", "position": { "x": 420, "y": 150 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "arch_bishop_1", "minLevel": 2 }], "connections": ["arch_bishop_3"], "effects": [{ "stat": "armor", "perLevel": 6 }] },
+    { "id": "arch_bishop_3", "name": "Judgement", "description": "Juzga enemigos.", "position": { "x": 640, "y": 150 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "arch_bishop_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "damage", "perLevel": 18 }] }
+  ]
+}

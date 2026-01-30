@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Sage - Ejemplo", "version": "1.0", "job": "Sage" },
+  "rules": { "totalSkillPoints": 11 },
+  "skills": [
+    { "id": "sage_1", "name": "Insight", "description": "Aumenta regeneración.", "position": { "x": 200, "y": 160 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["sage_2"], "effects": [{ "stat": "regen", "perLevel": 2 }] },
+    { "id": "sage_2", "name": "Wisdom", "description": "Mejora magia de apoyo.", "position": { "x": 420, "y": 160 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "sage_1", "minLevel": 2 }], "connections": ["sage_3"], "effects": [{ "stat": "support_power", "perLevel": 4 }] },
+    { "id": "sage_3", "name": "Scholar's Blessing", "description": "Potencia hechizos de control.", "position": { "x": 640, "y": 160 }, "maxLevel": 1, "currentLevel": 0, "prerequisites": [{ "id": "sage_2", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "control_power", "perLevel": 8 }] }
+  ]
+}

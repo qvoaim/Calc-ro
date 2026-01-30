@@ -1,0 +1,9 @@
+{
+  "meta": { "name": "Super-Novice - Ejemplo", "version": "1.0", "job": "Super-Novice" },
+  "rules": { "totalSkillPoints": 15 },
+  "skills": [
+    { "id": "super_novice_1", "name": "Iniciación", "description": "Habilidad base de Super-Novice.", "position": { "x": 250, "y": 150 }, "maxLevel": 5, "currentLevel": 0, "prerequisites": [], "connections": ["super_novice_2","super_novice_3"], "effects": [{ "stat": "hp", "perLevel": 10 }] },
+    { "id": "super_novice_2", "name": "Versatilidad", "description": "Mejora atributos secundarios.", "position": { "x": 450, "y": 120 }, "maxLevel": 3, "currentLevel": 0, "prerequisites": [{ "id": "super_novice_1", "minLevel": 1 }], "connections": [], "effects": [{ "stat": "all_stats", "perLevel": 1 }] },
+    { "id": "super_novice_3", "name": "Adaptación", "description": "Reduce cooldowns.", "position": { "x": 450, "y": 180 }, "maxLevel": 2, "currentLevel": 0, "prerequisites": [{ "id": "super_novice_1", "minLevel": 2 }], "connections": [], "effects": [{ "stat": "cooldown_reduce", "perLevel": 5 }] }
+  ]
+}
